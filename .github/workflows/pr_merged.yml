@@ -40,6 +40,7 @@ jobs:
       # The --force setting creates the object or updates it if it already exists
       # You can remove the "--source" flag if your dbt_project.yml is at root of your repo
       # The --default-target flag ensures the dbt project object compiles and executes with your prod target
+      #Reteste______
       - name: Create a new dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
         run: snow dbt deploy tasty_bytes_dbt_object_gh_action --source ./tasty_bytes_dbt_demo --default-target prod --dbt-version 1.10.15 --external-access-integration dbt_ext_access  --install-local-deps --force -x
 
